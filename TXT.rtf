@@ -1,0 +1,665 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2867
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red109\green109\blue109;\red24\green24\blue24;\red70\green137\blue204;
+\red193\green193\blue193;\red140\green211\blue254;\red194\green126\blue101;\red202\green202\blue202;\red167\green197\blue152;
+\red205\green173\blue106;\red212\green214\blue154;\red66\green179\blue255;\red89\green138\blue67;\red183\green111\blue179;
+\red67\green192\blue160;}
+{\*\expandedcolortbl;;\cssrgb\c50196\c50196\c50196;\cssrgb\c12157\c12157\c12157;\cssrgb\c33725\c61176\c83922;
+\cssrgb\c80000\c80000\c80000;\cssrgb\c61176\c86275\c99608;\cssrgb\c80784\c56863\c47059;\cssrgb\c83137\c83137\c83137;\cssrgb\c70980\c80784\c65882;
+\cssrgb\c84314\c72941\c49020;\cssrgb\c86275\c86275\c66667;\cssrgb\c30980\c75686\c100000;\cssrgb\c41569\c60000\c33333;\cssrgb\c77255\c52549\c75294;
+\cssrgb\c30588\c78824\c69020;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 <!\cf4 \strokec4 DOCTYPE\cf5 \strokec5  \cf6 \strokec6 html\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cf2 \cb3 \strokec2 <\cf4 \strokec4 html\cf5 \strokec5  \cf6 \strokec6 lang\cf5 \strokec5 =\cf7 \strokec7 "en"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\
+\cf2 \cb3 \strokec2 <\cf4 \strokec4 head\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb3     \cf2 \strokec2 <\cf4 \strokec4 meta\cf5 \strokec5  \cf6 \strokec6 charset\cf5 \strokec5 =\cf7 \strokec7 "UTF-8"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3     \cf2 \strokec2 <\cf4 \strokec4 meta\cf5 \strokec5  \cf6 \strokec6 name\cf5 \strokec5 =\cf7 \strokec7 "viewport"\cf5 \strokec5  \cf6 \strokec6 content\cf5 \strokec5 =\cf7 \strokec7 "width=device-width, initial-scale=1.0"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3     \cf2 \strokec2 <\cf4 \strokec4 title\cf2 \strokec2 >\cf5 \strokec5 Dividend Scout\cf2 \strokec2 </\cf4 \strokec4 title\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3     \cf2 \strokec2 <\cf4 \strokec4 style\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\pard\pardeftab720\partightenfactor0
+\cf8 \cb3 \strokec8         \cf4 \strokec4 *\cf8 \strokec8  \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 margin\cf8 \strokec8 : \cf9 \strokec9 0\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 padding\cf8 \strokec8 : \cf9 \strokec9 0\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 box-sizing\cf8 \strokec8 : \cf7 \strokec7 border-box\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8         \}\cf5 \cb1 \strokec5 \
+\
+\cf8 \cb3 \strokec8         \cf10 \strokec10 body\cf8 \strokec8  \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 font-family\cf8 \strokec8 : -apple-system, BlinkMacSystemFont, \cf7 \strokec7 'Segoe UI'\cf8 \strokec8 , Roboto, Oxygen, Ubuntu, Cantarell, \cf7 \strokec7 sans-serif\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 background-color\cf8 \strokec8 : \cf7 \strokec7 #f5f5f5\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 padding\cf8 \strokec8 : \cf9 \strokec9 40px\cf8 \strokec8  \cf9 \strokec9 20px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8         \}\cf5 \cb1 \strokec5 \
+\
+\cf8 \cb3 \strokec8         \cf10 \strokec10 .container\cf8 \strokec8  \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 max-width\cf8 \strokec8 : \cf9 \strokec9 1200px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 margin\cf8 \strokec8 : \cf9 \strokec9 0\cf8 \strokec8  \cf7 \strokec7 auto\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8         \}\cf5 \cb1 \strokec5 \
+\
+\cf8 \cb3 \strokec8         \cf10 \strokec10 h1\cf8 \strokec8  \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 font-size\cf8 \strokec8 : \cf9 \strokec9 56px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 font-weight\cf8 \strokec8 : \cf9 \strokec9 700\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 color\cf8 \strokec8 : \cf7 \strokec7 #1a1a1a\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 margin-bottom\cf8 \strokec8 : \cf9 \strokec9 40px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 text-align\cf8 \strokec8 : \cf7 \strokec7 center\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8         \}\cf5 \cb1 \strokec5 \
+\
+\cf8 \cb3 \strokec8         \cf10 \strokec10 .search-container\cf8 \strokec8  \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 margin-bottom\cf8 \strokec8 : \cf9 \strokec9 60px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8         \}\cf5 \cb1 \strokec5 \
+\
+\cf8 \cb3 \strokec8         \cf10 \strokec10 .search-box\cf8 \strokec8  \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 position\cf8 \strokec8 : \cf7 \strokec7 relative\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 max-width\cf8 \strokec8 : \cf9 \strokec9 600px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 margin\cf8 \strokec8 : \cf9 \strokec9 0\cf8 \strokec8  \cf7 \strokec7 auto\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8         \}\cf5 \cb1 \strokec5 \
+\
+\cf8 \cb3 \strokec8         \cf10 \strokec10 .search-input\cf8 \strokec8  \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 width\cf8 \strokec8 : \cf9 \strokec9 100%\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 padding\cf8 \strokec8 : \cf9 \strokec9 16px\cf8 \strokec8  \cf9 \strokec9 60px\cf8 \strokec8  \cf9 \strokec9 16px\cf8 \strokec8  \cf9 \strokec9 24px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 border\cf8 \strokec8 : \cf9 \strokec9 1px\cf8 \strokec8  \cf7 \strokec7 solid\cf8 \strokec8  \cf7 \strokec7 #ddd\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 border-radius\cf8 \strokec8 : \cf9 \strokec9 50px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 font-size\cf8 \strokec8 : \cf9 \strokec9 16px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 outline\cf8 \strokec8 : \cf7 \strokec7 none\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 transition\cf8 \strokec8 : border-color \cf9 \strokec9 0.3s\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8         \}\cf5 \cb1 \strokec5 \
+\
+\cf8 \cb3 \strokec8         \cf10 \strokec10 .search-input:focus\cf8 \strokec8  \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 border-color\cf8 \strokec8 : \cf7 \strokec7 #333\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8         \}\cf5 \cb1 \strokec5 \
+\
+\cf8 \cb3 \strokec8         \cf10 \strokec10 .search-button\cf8 \strokec8  \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 position\cf8 \strokec8 : \cf7 \strokec7 absolute\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 right\cf8 \strokec8 : \cf9 \strokec9 8px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 top\cf8 \strokec8 : \cf9 \strokec9 50%\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 transform\cf8 \strokec8 : \cf11 \strokec11 translateY\cf8 \strokec8 (\cf9 \strokec9 -50%\cf8 \strokec8 );\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 background\cf8 \strokec8 : \cf7 \strokec7 #1a1a1a\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 border\cf8 \strokec8 : \cf7 \strokec7 none\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 border-radius\cf8 \strokec8 : \cf9 \strokec9 50%\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 width\cf8 \strokec8 : \cf9 \strokec9 40px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 height\cf8 \strokec8 : \cf9 \strokec9 40px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 cursor\cf8 \strokec8 : \cf7 \strokec7 pointer\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 display\cf8 \strokec8 : \cf7 \strokec7 flex\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 align-items\cf8 \strokec8 : \cf7 \strokec7 center\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 justify-content\cf8 \strokec8 : \cf7 \strokec7 center\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8         \}\cf5 \cb1 \strokec5 \
+\
+\cf8 \cb3 \strokec8         \cf10 \strokec10 .search-button::before\cf8 \strokec8  \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 content\cf8 \strokec8 : \cf7 \strokec7 "\uc0\u55357 \u56589 "\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 filter\cf8 \strokec8 : \cf11 \strokec11 invert\cf8 \strokec8 (\cf9 \strokec9 1\cf8 \strokec8 );\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8         \}\cf5 \cb1 \strokec5 \
+\
+\cf8 \cb3 \strokec8         \cf10 \strokec10 .search-hint\cf8 \strokec8  \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 text-align\cf8 \strokec8 : \cf7 \strokec7 center\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 color\cf8 \strokec8 : \cf7 \strokec7 #666\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 font-size\cf8 \strokec8 : \cf9 \strokec9 14px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 margin-top\cf8 \strokec8 : \cf9 \strokec9 12px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8         \}\cf5 \cb1 \strokec5 \
+\
+\cf8 \cb3 \strokec8         \cf10 \strokec10 .stock-header\cf8 \strokec8  \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 margin-bottom\cf8 \strokec8 : \cf9 \strokec9 40px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8         \}\cf5 \cb1 \strokec5 \
+\
+\cf8 \cb3 \strokec8         \cf10 \strokec10 .stock-symbol\cf8 \strokec8  \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 font-size\cf8 \strokec8 : \cf9 \strokec9 48px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 font-weight\cf8 \strokec8 : \cf9 \strokec9 700\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 color\cf8 \strokec8 : \cf7 \strokec7 #1a1a1a\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 margin-bottom\cf8 \strokec8 : \cf9 \strokec9 8px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8         \}\cf5 \cb1 \strokec5 \
+\
+\cf8 \cb3 \strokec8         \cf10 \strokec10 .company-name\cf8 \strokec8  \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 font-size\cf8 \strokec8 : \cf9 \strokec9 18px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 color\cf8 \strokec8 : \cf7 \strokec7 #666\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 margin-bottom\cf8 \strokec8 : \cf9 \strokec9 16px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8         \}\cf5 \cb1 \strokec5 \
+\
+\cf8 \cb3 \strokec8         \cf10 \strokec10 .stock-price\cf8 \strokec8  \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 display\cf8 \strokec8 : \cf7 \strokec7 flex\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 align-items\cf8 \strokec8 : \cf7 \strokec7 center\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 justify-content\cf8 \strokec8 : \cf7 \strokec7 flex-end\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 gap\cf8 \strokec8 : \cf9 \strokec9 12px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8         \}\cf5 \cb1 \strokec5 \
+\
+\cf8 \cb3 \strokec8         \cf10 \strokec10 .price\cf8 \strokec8  \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 font-size\cf8 \strokec8 : \cf9 \strokec9 36px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 font-weight\cf8 \strokec8 : \cf9 \strokec9 700\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 color\cf8 \strokec8 : \cf7 \strokec7 #1a1a1a\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8         \}\cf5 \cb1 \strokec5 \
+\
+\cf8 \cb3 \strokec8         \cf10 \strokec10 .price-change\cf8 \strokec8  \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 font-size\cf8 \strokec8 : \cf9 \strokec9 16px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 color\cf8 \strokec8 : \cf7 \strokec7 #22c55e\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 display\cf8 \strokec8 : \cf7 \strokec7 flex\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 align-items\cf8 \strokec8 : \cf7 \strokec7 center\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 gap\cf8 \strokec8 : \cf9 \strokec9 4px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8         \}\cf5 \cb1 \strokec5 \
+\
+\cf8 \cb3 \strokec8         \cf10 \strokec10 .stats-grid\cf8 \strokec8  \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 display\cf8 \strokec8 : \cf7 \strokec7 grid\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 grid-template-columns\cf8 \strokec8 : \cf11 \strokec11 repeat\cf8 \strokec8 (\cf7 \strokec7 auto-fit\cf8 \strokec8 , \cf11 \strokec11 minmax\cf8 \strokec8 (\cf9 \strokec9 240px\cf8 \strokec8 , \cf9 \strokec9 1fr\cf8 \strokec8 ));\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 gap\cf8 \strokec8 : \cf9 \strokec9 20px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 margin-bottom\cf8 \strokec8 : \cf9 \strokec9 40px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8         \}\cf5 \cb1 \strokec5 \
+\
+\cf8 \cb3 \strokec8         \cf10 \strokec10 .stat-card\cf8 \strokec8  \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 background\cf8 \strokec8 : \cf7 \strokec7 white\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 border-radius\cf8 \strokec8 : \cf9 \strokec9 16px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 padding\cf8 \strokec8 : \cf9 \strokec9 28px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 box-shadow\cf8 \strokec8 : \cf9 \strokec9 0\cf8 \strokec8  \cf9 \strokec9 2px\cf8 \strokec8  \cf9 \strokec9 8px\cf8 \strokec8  \cf11 \strokec11 rgba\cf8 \strokec8 (\cf9 \strokec9 0\cf8 \strokec8 , \cf9 \strokec9 0\cf8 \strokec8 , \cf9 \strokec9 0\cf8 \strokec8 , \cf9 \strokec9 0.06\cf8 \strokec8 );\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8         \}\cf5 \cb1 \strokec5 \
+\
+\cf8 \cb3 \strokec8         \cf10 \strokec10 .stat-card.dark\cf8 \strokec8  \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 background\cf8 \strokec8 : \cf7 \strokec7 #2a2d3a\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 color\cf8 \strokec8 : \cf7 \strokec7 white\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8         \}\cf5 \cb1 \strokec5 \
+\
+\cf8 \cb3 \strokec8         \cf10 \strokec10 .stat-label\cf8 \strokec8  \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 font-size\cf8 \strokec8 : \cf9 \strokec9 14px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 color\cf8 \strokec8 : \cf7 \strokec7 #666\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 margin-bottom\cf8 \strokec8 : \cf9 \strokec9 12px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 display\cf8 \strokec8 : \cf7 \strokec7 flex\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 align-items\cf8 \strokec8 : \cf7 \strokec7 center\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 gap\cf8 \strokec8 : \cf9 \strokec9 8px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8         \}\cf5 \cb1 \strokec5 \
+\
+\cf8 \cb3 \strokec8         \cf10 \strokec10 .stat-card.dark\cf8 \strokec8  \cf10 \strokec10 .stat-label\cf8 \strokec8  \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 color\cf8 \strokec8 : \cf7 \strokec7 #a0a0a0\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8         \}\cf5 \cb1 \strokec5 \
+\
+\cf8 \cb3 \strokec8         \cf10 \strokec10 .stat-value\cf8 \strokec8  \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 font-size\cf8 \strokec8 : \cf9 \strokec9 32px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 font-weight\cf8 \strokec8 : \cf9 \strokec9 700\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 color\cf8 \strokec8 : \cf7 \strokec7 #1a1a1a\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8         \}\cf5 \cb1 \strokec5 \
+\
+\cf8 \cb3 \strokec8         \cf10 \strokec10 .stat-card.dark\cf8 \strokec8  \cf10 \strokec10 .stat-value\cf8 \strokec8  \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 color\cf8 \strokec8 : \cf7 \strokec7 white\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8         \}\cf5 \cb1 \strokec5 \
+\
+\cf8 \cb3 \strokec8         \cf10 \strokec10 .stat-subtitle\cf8 \strokec8  \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 font-size\cf8 \strokec8 : \cf9 \strokec9 13px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 color\cf8 \strokec8 : \cf7 \strokec7 #22c55e\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 margin-top\cf8 \strokec8 : \cf9 \strokec9 8px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8         \}\cf5 \cb1 \strokec5 \
+\
+\cf8 \cb3 \strokec8         \cf10 \strokec10 .payment-schedule\cf8 \strokec8  \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 background\cf8 \strokec8 : \cf7 \strokec7 white\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 border-radius\cf8 \strokec8 : \cf9 \strokec9 20px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 padding\cf8 \strokec8 : \cf9 \strokec9 40px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 margin-bottom\cf8 \strokec8 : \cf9 \strokec9 40px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 color\cf8 \strokec8 : \cf7 \strokec7 #1a1a1a\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 box-shadow\cf8 \strokec8 : \cf9 \strokec9 0\cf8 \strokec8  \cf9 \strokec9 2px\cf8 \strokec8  \cf9 \strokec9 8px\cf8 \strokec8  \cf11 \strokec11 rgba\cf8 \strokec8 (\cf9 \strokec9 0\cf8 \strokec8 , \cf9 \strokec9 0\cf8 \strokec8 , \cf9 \strokec9 0\cf8 \strokec8 , \cf9 \strokec9 0.06\cf8 \strokec8 );\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8         \}\cf5 \cb1 \strokec5 \
+\
+\cf8 \cb3 \strokec8         \cf10 \strokec10 .payment-schedule\cf8 \strokec8  \cf10 \strokec10 h2\cf8 \strokec8  \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 font-size\cf8 \strokec8 : \cf9 \strokec9 14px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 text-transform\cf8 \strokec8 : \cf7 \strokec7 uppercase\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 letter-spacing\cf8 \strokec8 : \cf9 \strokec9 1.5px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 color\cf8 \strokec8 : \cf7 \strokec7 #666\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 margin-bottom\cf8 \strokec8 : \cf9 \strokec9 32px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 font-weight\cf8 \strokec8 : \cf9 \strokec9 500\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8         \}\cf5 \cb1 \strokec5 \
+\
+\cf8 \cb3 \strokec8         \cf10 \strokec10 .payment-grid\cf8 \strokec8  \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 display\cf8 \strokec8 : \cf7 \strokec7 grid\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 grid-template-columns\cf8 \strokec8 : \cf11 \strokec11 repeat\cf8 \strokec8 (\cf7 \strokec7 auto-fit\cf8 \strokec8 , \cf11 \strokec11 minmax\cf8 \strokec8 (\cf9 \strokec9 200px\cf8 \strokec8 , \cf9 \strokec9 1fr\cf8 \strokec8 ));\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 gap\cf8 \strokec8 : \cf9 \strokec9 24px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8         \}\cf5 \cb1 \strokec5 \
+\
+\cf8 \cb3 \strokec8         \cf10 \strokec10 .payment-item\cf8 \strokec8  \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 background\cf8 \strokec8 : \cf7 \strokec7 #f9f9f9\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 border-radius\cf8 \strokec8 : \cf9 \strokec9 12px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 padding\cf8 \strokec8 : \cf9 \strokec9 20px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8         \}\cf5 \cb1 \strokec5 \
+\
+\cf8 \cb3 \strokec8         \cf10 \strokec10 .payment-label\cf8 \strokec8  \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 font-size\cf8 \strokec8 : \cf9 \strokec9 13px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 color\cf8 \strokec8 : \cf7 \strokec7 #666\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 margin-bottom\cf8 \strokec8 : \cf9 \strokec9 8px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8         \}\cf5 \cb1 \strokec5 \
+\
+\cf8 \cb3 \strokec8         \cf10 \strokec10 .payment-value\cf8 \strokec8  \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 font-size\cf8 \strokec8 : \cf9 \strokec9 18px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 font-weight\cf8 \strokec8 : \cf9 \strokec9 600\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 color\cf8 \strokec8 : \cf7 \strokec7 #1a1a1a\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8         \}\cf5 \cb1 \strokec5 \
+\
+\cf8 \cb3 \strokec8         \cf10 \strokec10 .description\cf8 \strokec8  \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 color\cf8 \strokec8 : \cf7 \strokec7 #666\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 line-height\cf8 \strokec8 : \cf9 \strokec9 1.6\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 margin-bottom\cf8 \strokec8 : \cf9 \strokec9 40px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 font-size\cf8 \strokec8 : \cf9 \strokec9 16px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8         \}\cf5 \cb1 \strokec5 \
+\
+\cf8 \cb3 \strokec8         \cf10 \strokec10 .dividend-history\cf8 \strokec8  \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 background\cf8 \strokec8 : \cf7 \strokec7 white\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 border-radius\cf8 \strokec8 : \cf9 \strokec9 16px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 padding\cf8 \strokec8 : \cf9 \strokec9 32px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 box-shadow\cf8 \strokec8 : \cf9 \strokec9 0\cf8 \strokec8  \cf9 \strokec9 2px\cf8 \strokec8  \cf9 \strokec9 8px\cf8 \strokec8  \cf11 \strokec11 rgba\cf8 \strokec8 (\cf9 \strokec9 0\cf8 \strokec8 , \cf9 \strokec9 0\cf8 \strokec8 , \cf9 \strokec9 0\cf8 \strokec8 , \cf9 \strokec9 0.06\cf8 \strokec8 );\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8         \}\cf5 \cb1 \strokec5 \
+\
+\cf8 \cb3 \strokec8         \cf10 \strokec10 .dividend-history\cf8 \strokec8  \cf10 \strokec10 h2\cf8 \strokec8  \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 font-size\cf8 \strokec8 : \cf9 \strokec9 24px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 font-weight\cf8 \strokec8 : \cf9 \strokec9 700\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 margin-bottom\cf8 \strokec8 : \cf9 \strokec9 8px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8         \}\cf5 \cb1 \strokec5 \
+\
+\cf8 \cb3 \strokec8         \cf10 \strokec10 .dividend-history\cf8 \strokec8  \cf10 \strokec10 p\cf8 \strokec8  \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 color\cf8 \strokec8 : \cf7 \strokec7 #666\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 font-size\cf8 \strokec8 : \cf9 \strokec9 14px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 margin-bottom\cf8 \strokec8 : \cf9 \strokec9 24px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8         \}\cf5 \cb1 \strokec5 \
+\
+\cf8 \cb3 \strokec8         \cf10 \strokec10 .chart-placeholder\cf8 \strokec8  \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 height\cf8 \strokec8 : \cf9 \strokec9 200px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 background\cf8 \strokec8 : \cf11 \strokec11 linear-gradient\cf8 \strokec8 (to \cf7 \strokec7 top\cf8 \strokec8 , \cf7 \strokec7 #e5e7eb\cf8 \strokec8  \cf9 \strokec9 0%\cf8 \strokec8 , \cf7 \strokec7 #e5e7eb\cf8 \strokec8  \cf9 \strokec9 20%\cf8 \strokec8 , \cf7 \strokec7 transparent\cf8 \strokec8  \cf9 \strokec9 20%\cf8 \strokec8 );\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 border-radius\cf8 \strokec8 : \cf9 \strokec9 8px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 position\cf8 \strokec8 : \cf7 \strokec7 relative\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8         \}\cf5 \cb1 \strokec5 \
+\
+\cf8 \cb3 \strokec8         \cf10 \strokec10 .chart-bars\cf8 \strokec8  \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 position\cf8 \strokec8 : \cf7 \strokec7 absolute\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 bottom\cf8 \strokec8 : \cf9 \strokec9 0\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 left\cf8 \strokec8 : \cf9 \strokec9 0\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 right\cf8 \strokec8 : \cf9 \strokec9 0\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 height\cf8 \strokec8 : \cf9 \strokec9 100%\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 display\cf8 \strokec8 : \cf7 \strokec7 flex\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 align-items\cf8 \strokec8 : \cf7 \strokec7 flex-end\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 justify-content\cf8 \strokec8 : \cf7 \strokec7 space-around\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 padding\cf8 \strokec8 : \cf9 \strokec9 0\cf8 \strokec8  \cf9 \strokec9 20px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8         \}\cf5 \cb1 \strokec5 \
+\
+\cf8 \cb3 \strokec8         \cf10 \strokec10 .chart-bar\cf8 \strokec8  \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 width\cf8 \strokec8 : \cf9 \strokec9 40px\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 background\cf8 \strokec8 : \cf11 \strokec11 linear-gradient\cf8 \strokec8 (to \cf7 \strokec7 top\cf8 \strokec8 , \cf7 \strokec7 #1a1a1a\cf8 \strokec8 , \cf7 \strokec7 #4a4a4a\cf8 \strokec8 );\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 border-radius\cf8 \strokec8 : \cf9 \strokec9 4px\cf8 \strokec8  \cf9 \strokec9 4px\cf8 \strokec8  \cf9 \strokec9 0\cf8 \strokec8  \cf9 \strokec9 0\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 transition\cf8 \strokec8 : opacity \cf9 \strokec9 0.3s\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8         \}\cf5 \cb1 \strokec5 \
+\
+\cf8 \cb3 \strokec8         \cf10 \strokec10 .chart-bar:hover\cf8 \strokec8  \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 opacity\cf8 \strokec8 : \cf9 \strokec9 0.8\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8         \}\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8     \cf2 \strokec2 </\cf4 \strokec4 style\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec2 </\cf4 \strokec4 head\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\
+\cf2 \cb3 \strokec2 <\cf4 \strokec4 body\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\pard\pardeftab720\partightenfactor0
+\cf5 \cb3     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "container"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3         \cf2 \strokec2 <\cf4 \strokec4 h1\cf2 \strokec2 >\cf5 \strokec5 Dividend Scout\cf2 \strokec2 </\cf4 \strokec4 h1\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\
+\cb3         \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "search-container"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3             \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "search-box"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf2 \strokec2 <\cf4 \strokec4 input\cf5 \strokec5  \cf6 \strokec6 type\cf5 \strokec5 =\cf7 \strokec7 "text"\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "search-input"\cf5 \strokec5  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "searchInput"\cf5 \strokec5  \cf6 \strokec6 placeholder\cf5 \strokec5 =\cf7 \strokec7 "ko"\cf5 \strokec5  \cf6 \strokec6 value\cf5 \strokec5 =\cf7 \strokec7 "ko"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf2 \strokec2 <\cf4 \strokec4 button\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "search-button"\cf5 \strokec5  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "searchButton"\cf2 \strokec2 ></\cf4 \strokec4 button\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3             \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3             \cf2 \strokec2 <\cf4 \strokec4 p\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "search-hint"\cf2 \strokec2 >\cf5 \strokec5 Try searching for 0, KO, or AAPL\cf2 \strokec2 </\cf4 \strokec4 p\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3         \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\
+\cb3         \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "loadingMessage"\cf5 \strokec5  \cf6 \strokec6 style\cf5 \strokec5 =\cf7 \strokec7 "display: none; text-align: center; padding: 40px; color: #666;"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3             Loading dividend data...\cb1 \
+\cb3         \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\
+\cb3         \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "errorMessage"\cf5 \strokec5  \cf6 \strokec6 style\cf5 \strokec5 =\cf7 \strokec7 "display: none; text-align: center; padding: 40px; color: #ef4444;"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3             \cf2 \strokec2 <\cf4 \strokec4 h3\cf2 \strokec2 >\cf5 \strokec5 Stock not found\cf2 \strokec2 </\cf4 \strokec4 h3\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3             \cf2 \strokec2 <\cf4 \strokec4 p\cf2 \strokec2 >\cf5 \strokec5 Please try another symbol\cf2 \strokec2 </\cf4 \strokec4 p\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3         \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\
+\cb3         \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 id\cf5 \strokec5 =\cf7 \strokec7 "stockData"\cf5 \strokec5  \cf6 \strokec6 style\cf5 \strokec5 =\cf7 \strokec7 "display: block;"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\
+\cb3             \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "stock-header"\cf5 \strokec5  \cf6 \strokec6 style\cf5 \strokec5 =\cf7 \strokec7 "display: flex; justify-content: space-between; align-items: flex-start;"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf2 \strokec2 <\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "stock-symbol"\cf2 \strokec2 >\cf5 \strokec5 KO\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "company-name"\cf2 \strokec2 >\cf5 \strokec5 The Coca-Cola Company\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "stock-price"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "price"\cf2 \strokec2 >\cf5 \strokec5 $61.88\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "price-change"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                         \uc0\u8599  +0.12 (0.19%)\cb1 \
+\cb3                     \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3             \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\
+\cb3             \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "stats-grid"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "stat-card"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "stat-label"\cf2 \strokec2 >\cf5 \strokec5 Symbol\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "stat-value"\cf2 \strokec2 >\cf5 \strokec5 KO\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "stat-card"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "stat-label"\cf2 \strokec2 >\cf5 \strokec5 Company Name\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "stat-value"\cf2 \strokec2 >\cf5 \strokec5 Coca-Cola\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "stat-card"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "stat-label"\cf2 \strokec2 >\cf5 \strokec5 Industry\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "stat-value"\cf2 \strokec2 >\cf5 \strokec5 Beverages\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "stat-card"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "stat-label"\cf2 \strokec2 >\cf5 \strokec5 Market Cap\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "stat-value"\cf2 \strokec2 >\cf5 \strokec5 $267B\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "stat-card"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "stat-label"\cf2 \strokec2 >\cf5 \strokec5 Stock Price\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "stat-value"\cf2 \strokec2 >\cf5 \strokec5 $61.88\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "stat-card"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "stat-label"\cf2 \strokec2 >\cf5 \strokec5 PE\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "stat-value"\cf2 \strokec2 >\cf5 \strokec5 -\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "stat-card"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "stat-label"\cf2 \strokec2 >\cf5 \strokec5 Div. Yield\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "stat-value"\cf2 \strokec2 >\cf5 \strokec5 3.12%\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "stat-card"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "stat-label"\cf2 \strokec2 >\cf5 \strokec5 Annual Payout\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "stat-value"\cf2 \strokec2 >\cf5 \strokec5 $1.94\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "stat-card"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "stat-label"\cf2 \strokec2 >\cf5 \strokec5 Payout Ratio\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "stat-value"\cf2 \strokec2 >\cf5 \strokec5 68.5%\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "stat-card"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "stat-label"\cf2 \strokec2 >\cf5 \strokec5 Growth Streak\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "stat-value"\cf2 \strokec2 >\cf5 \strokec5 62 Yrs\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3             \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\
+\cb3             \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "payment-schedule"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf2 \strokec2 <\cf4 \strokec4 h2\cf2 \strokec2 >\cf5 \strokec5 PAYMENT SCHEDULE\cf2 \strokec2 </\cf4 \strokec4 h2\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "payment-grid"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "payment-item"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "payment-label"\cf2 \strokec2 >\cf5 \strokec5 Frequency\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "payment-value"\cf2 \strokec2 >\cf5 \strokec5 Quarterly\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "payment-item"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "payment-label"\cf2 \strokec2 >\cf5 \strokec5 Ex-Dividend Date\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "payment-value"\cf2 \strokec2 >\cf5 \strokec5 \uc0\u55357 \u56517  2024-11-29\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "payment-item"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "payment-label"\cf2 \strokec2 >\cf5 \strokec5 Next Payment\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "payment-value"\cf2 \strokec2 >\cf5 \strokec5 \uc0\u55357 \u56498  2024-12-16\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "payment-item"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "payment-label"\cf2 \strokec2 >\cf5 \strokec5 Record Date\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "payment-value"\cf2 \strokec2 >\cf5 \strokec5 \uc0\u55357 \u56523  2024-12-01\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "payment-item"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "payment-label"\cf2 \strokec2 >\cf5 \strokec5 Payment Amount\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "payment-value"\cf2 \strokec2 >\cf5 \strokec5 $0.485\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "payment-item"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "payment-label"\cf2 \strokec2 >\cf5 \strokec5 Annual Yield\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "payment-value"\cf2 \strokec2 >\cf5 \strokec5 3.12%\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "payment-item"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "payment-label"\cf2 \strokec2 >\cf5 \strokec5 Last Increase\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "payment-value"\cf2 \strokec2 >\cf5 \strokec5 \uc0\u55357 \u56520  Feb 2024\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "payment-item"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "payment-label"\cf2 \strokec2 >\cf5 \strokec5 5-Year Growth\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "payment-value"\cf2 \strokec2 >\cf5 \strokec5 +18.5%\cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3             \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\
+\cb3             \cf2 \strokec2 <\cf4 \strokec4 p\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "description"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 The Coca-Cola Company is a total beverage company, offering over 500 brands in more than 200 countries\cb1 \
+\cb3                 and\cb1 \
+\cb3                 territories.\cb1 \
+\cb3             \cf2 \strokec2 </\cf4 \strokec4 p\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\
+\cb3             \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "dividend-history"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf2 \strokec2 <\cf4 \strokec4 h2\cf2 \strokec2 >\cf5 \strokec5 Dividend History\cf2 \strokec2 </\cf4 \strokec4 h2\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf2 \strokec2 <\cf4 \strokec4 p\cf2 \strokec2 >\cf5 \strokec5 Recent payout amounts per share\cf2 \strokec2 </\cf4 \strokec4 p\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "chart-placeholder"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "chart-bars"\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "chart-bar"\cf5 \strokec5  \cf6 \strokec6 style\cf5 \strokec5 =\cf7 \strokec7 "height: 45%;"\cf2 \strokec2 ></\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "chart-bar"\cf5 \strokec5  \cf6 \strokec6 style\cf5 \strokec5 =\cf7 \strokec7 "height: 50%;"\cf2 \strokec2 ></\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "chart-bar"\cf5 \strokec5  \cf6 \strokec6 style\cf5 \strokec5 =\cf7 \strokec7 "height: 55%;"\cf2 \strokec2 ></\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "chart-bar"\cf5 \strokec5  \cf6 \strokec6 style\cf5 \strokec5 =\cf7 \strokec7 "height: 60%;"\cf2 \strokec2 ></\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "chart-bar"\cf5 \strokec5  \cf6 \strokec6 style\cf5 \strokec5 =\cf7 \strokec7 "height: 65%;"\cf2 \strokec2 ></\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "chart-bar"\cf5 \strokec5  \cf6 \strokec6 style\cf5 \strokec5 =\cf7 \strokec7 "height: 70%;"\cf2 \strokec2 ></\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "chart-bar"\cf5 \strokec5  \cf6 \strokec6 style\cf5 \strokec5 =\cf7 \strokec7 "height: 75%;"\cf2 \strokec2 ></\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                         \cf2 \strokec2 <\cf4 \strokec4 div\cf5 \strokec5  \cf6 \strokec6 class\cf5 \strokec5 =\cf7 \strokec7 "chart-bar"\cf5 \strokec5  \cf6 \strokec6 style\cf5 \strokec5 =\cf7 \strokec7 "height: 80%;"\cf2 \strokec2 ></\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                     \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3                 \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3             \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3         \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\cb3     \cf2 \strokec2 </\cf4 \strokec4 div\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\
+\cb3     \cf2 \strokec2 <\cf4 \strokec4 script\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\pard\pardeftab720\partightenfactor0
+\cf8 \cb3 \strokec8         \cf4 \strokec4 const\cf8 \strokec8  \cf12 \strokec12 API_BASE_URL\cf8 \strokec8  = \cf7 \strokec7 'http://localhost:3000'\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\
+\cf8 \cb3 \strokec8         \cf13 \strokec13 // Mock data for testing (when API is not available)\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8         \cf4 \strokec4 const\cf8 \strokec8  \cf12 \strokec12 mockData\cf8 \strokec8  = \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf7 \strokec7 'KO'\cf8 \strokec8 : \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 symbol\cf8 \strokec8 : \cf7 \strokec7 'KO'\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 companyName\cf8 \strokec8 : \cf7 \strokec7 'The Coca-Cola Company'\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 industry\cf8 \strokec8 : \cf7 \strokec7 'Beverages'\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 marketCap\cf8 \strokec8 : \cf7 \strokec7 '$267B'\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 stockPrice\cf8 \strokec8 : \cf9 \strokec9 61.88\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 priceChange\cf8 \strokec8 : \cf9 \strokec9 0.12\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 priceChangePercent\cf8 \strokec8 : \cf9 \strokec9 0.19\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 dividendYield\cf8 \strokec8 : \cf9 \strokec9 3.12\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 annualPayout\cf8 \strokec8 : \cf9 \strokec9 1.94\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 payoutRatio\cf8 \strokec8 : \cf9 \strokec9 68.5\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 payoutRatioStatus\cf8 \strokec8 : \cf7 \strokec7 'Healthy'\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 growthStreak\cf8 \strokec8 : \cf9 \strokec9 62\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 paymentSchedule\cf8 \strokec8 : \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                     \cf6 \strokec6 frequency\cf8 \strokec8 : \cf7 \strokec7 'Quarterly'\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                     \cf6 \strokec6 exDividendDate\cf8 \strokec8 : \cf7 \strokec7 '2024-11-29'\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                     \cf6 \strokec6 nextPayment\cf8 \strokec8 : \cf7 \strokec7 '2024-12-16'\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                     \cf6 \strokec6 recordDate\cf8 \strokec8 : \cf7 \strokec7 '2024-12-01'\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                     \cf6 \strokec6 paymentAmount\cf8 \strokec8 : \cf9 \strokec9 0.485\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                     \cf6 \strokec6 annualYield\cf8 \strokec8 : \cf9 \strokec9 3.12\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                     \cf6 \strokec6 lastIncrease\cf8 \strokec8 : \cf7 \strokec7 'Feb 2024'\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                     \cf6 \strokec6 fiveYearGrowth\cf8 \strokec8 : \cf9 \strokec9 18.5\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                     \cf6 \strokec6 dividendKing\cf8 \strokec8 : \cf4 \strokec4 true\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \},\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 description\cf8 \strokec8 : \cf7 \strokec7 'The Coca-Cola Company is a total beverage company, offering over 500 brands in more than 200 countries and territories.'\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \},\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf7 \strokec7 'AAPL'\cf8 \strokec8 : \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 symbol\cf8 \strokec8 : \cf7 \strokec7 'AAPL'\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 companyName\cf8 \strokec8 : \cf7 \strokec7 'Apple Inc.'\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 industry\cf8 \strokec8 : \cf7 \strokec7 'Technology'\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 marketCap\cf8 \strokec8 : \cf7 \strokec7 '$2.89T'\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 stockPrice\cf8 \strokec8 : \cf9 \strokec9 189.45\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 priceChange\cf8 \strokec8 : \cf9 \strokec9 2.15\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 priceChangePercent\cf8 \strokec8 : \cf9 \strokec9 1.15\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 dividendYield\cf8 \strokec8 : \cf9 \strokec9 0.47\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 annualPayout\cf8 \strokec8 : \cf9 \strokec9 0.96\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 payoutRatio\cf8 \strokec8 : \cf9 \strokec9 15.2\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 payoutRatioStatus\cf8 \strokec8 : \cf7 \strokec7 'Very Healthy'\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 growthStreak\cf8 \strokec8 : \cf9 \strokec9 12\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 paymentSchedule\cf8 \strokec8 : \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                     \cf6 \strokec6 frequency\cf8 \strokec8 : \cf7 \strokec7 'Quarterly'\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                     \cf6 \strokec6 exDividendDate\cf8 \strokec8 : \cf7 \strokec7 '2024-11-08'\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                     \cf6 \strokec6 nextPayment\cf8 \strokec8 : \cf7 \strokec7 '2024-11-14'\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                     \cf6 \strokec6 recordDate\cf8 \strokec8 : \cf7 \strokec7 '2024-11-11'\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                     \cf6 \strokec6 paymentAmount\cf8 \strokec8 : \cf9 \strokec9 0.24\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                     \cf6 \strokec6 annualYield\cf8 \strokec8 : \cf9 \strokec9 0.47\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                     \cf6 \strokec6 lastIncrease\cf8 \strokec8 : \cf7 \strokec7 'Feb 2024'\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                     \cf6 \strokec6 fiveYearGrowth\cf8 \strokec8 : \cf9 \strokec9 8.2\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                     \cf6 \strokec6 dividendKing\cf8 \strokec8 : \cf4 \strokec4 false\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \},\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 description\cf8 \strokec8 : \cf7 \strokec7 'Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories worldwide.'\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \},\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf7 \strokec7 'JNJ'\cf8 \strokec8 : \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 symbol\cf8 \strokec8 : \cf7 \strokec7 'JNJ'\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 companyName\cf8 \strokec8 : \cf7 \strokec7 'Johnson & Johnson'\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 industry\cf8 \strokec8 : \cf7 \strokec7 'Healthcare'\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 marketCap\cf8 \strokec8 : \cf7 \strokec7 '$385B'\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 stockPrice\cf8 \strokec8 : \cf9 \strokec9 156.32\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 priceChange\cf8 \strokec8 : \cf9 \strokec9 -0.45\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 priceChangePercent\cf8 \strokec8 : \cf9 \strokec9 -0.29\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 dividendYield\cf8 \strokec8 : \cf9 \strokec9 3.05\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 annualPayout\cf8 \strokec8 : \cf9 \strokec9 4.76\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 payoutRatio\cf8 \strokec8 : \cf9 \strokec9 45.8\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 payoutRatioStatus\cf8 \strokec8 : \cf7 \strokec7 'Healthy'\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 growthStreak\cf8 \strokec8 : \cf9 \strokec9 62\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 paymentSchedule\cf8 \strokec8 : \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                     \cf6 \strokec6 frequency\cf8 \strokec8 : \cf7 \strokec7 'Quarterly'\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                     \cf6 \strokec6 exDividendDate\cf8 \strokec8 : \cf7 \strokec7 '2024-11-22'\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                     \cf6 \strokec6 nextPayment\cf8 \strokec8 : \cf7 \strokec7 '2024-12-10'\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                     \cf6 \strokec6 recordDate\cf8 \strokec8 : \cf7 \strokec7 '2024-11-25'\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                     \cf6 \strokec6 paymentAmount\cf8 \strokec8 : \cf9 \strokec9 1.19\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                     \cf6 \strokec6 annualYield\cf8 \strokec8 : \cf9 \strokec9 3.05\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                     \cf6 \strokec6 lastIncrease\cf8 \strokec8 : \cf7 \strokec7 'Apr 2024'\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                     \cf6 \strokec6 fiveYearGrowth\cf8 \strokec8 : \cf9 \strokec9 5.8\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                     \cf6 \strokec6 dividendKing\cf8 \strokec8 : \cf4 \strokec4 true\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \},\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 description\cf8 \strokec8 : \cf7 \strokec7 'Johnson & Johnson is a holding company engaged in the research and development, manufacture and sale of a broad range of products in the healthcare field.'\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \},\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf7 \strokec7 'PG'\cf8 \strokec8 : \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 symbol\cf8 \strokec8 : \cf7 \strokec7 'PG'\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 companyName\cf8 \strokec8 : \cf7 \strokec7 'Procter & Gamble'\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 industry\cf8 \strokec8 : \cf7 \strokec7 'Consumer Goods'\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 marketCap\cf8 \strokec8 : \cf7 \strokec7 '$365B'\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 stockPrice\cf8 \strokec8 : \cf9 \strokec9 152.18\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 priceChange\cf8 \strokec8 : \cf9 \strokec9 1.23\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 priceChangePercent\cf8 \strokec8 : \cf9 \strokec9 0.81\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 dividendYield\cf8 \strokec8 : \cf9 \strokec9 2.45\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 annualPayout\cf8 \strokec8 : \cf9 \strokec9 3.73\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 payoutRatio\cf8 \strokec8 : \cf9 \strokec9 58.2\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 payoutRatioStatus\cf8 \strokec8 : \cf7 \strokec7 'Healthy'\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 growthStreak\cf8 \strokec8 : \cf9 \strokec9 68\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 paymentSchedule\cf8 \strokec8 : \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                     \cf6 \strokec6 frequency\cf8 \strokec8 : \cf7 \strokec7 'Quarterly'\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                     \cf6 \strokec6 exDividendDate\cf8 \strokec8 : \cf7 \strokec7 '2024-10-18'\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                     \cf6 \strokec6 nextPayment\cf8 \strokec8 : \cf7 \strokec7 '2024-11-15'\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                     \cf6 \strokec6 recordDate\cf8 \strokec8 : \cf7 \strokec7 '2024-10-21'\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                     \cf6 \strokec6 paymentAmount\cf8 \strokec8 : \cf9 \strokec9 0.9338\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                     \cf6 \strokec6 annualYield\cf8 \strokec8 : \cf9 \strokec9 2.45\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                     \cf6 \strokec6 lastIncrease\cf8 \strokec8 : \cf7 \strokec7 'Apr 2024'\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                     \cf6 \strokec6 fiveYearGrowth\cf8 \strokec8 : \cf9 \strokec9 4.5\cf8 \strokec8 ,\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                     \cf6 \strokec6 dividendKing\cf8 \strokec8 : \cf4 \strokec4 true\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \},\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 description\cf8 \strokec8 : \cf7 \strokec7 'The Procter & Gamble Company provides branded consumer packaged goods to consumers in North America, Europe, the Asia Pacific, Greater China, Latin America, India, the Middle East, and Africa.'\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \}\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8         \};\cf5 \cb1 \strokec5 \
+\
+\cf8 \cb3 \strokec8         \cf13 \strokec13 // Function to fetch dividend data\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8         \cf4 \strokec4 async\cf8 \strokec8  \cf4 \strokec4 function\cf8 \strokec8  \cf11 \strokec11 fetchDividendData\cf8 \strokec8 (\cf6 \strokec6 symbol\cf8 \strokec8 ) \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf14 \strokec14 try\cf8 \strokec8  \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf13 \strokec13 // Try to fetch from API first\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf4 \strokec4 const\cf8 \strokec8  \cf12 \strokec12 response\cf8 \strokec8  = \cf14 \strokec14 await\cf8 \strokec8  \cf11 \strokec11 fetch\cf8 \strokec8 (\cf7 \strokec7 `$\{\cf12 \strokec12 API_BASE_URL\cf7 \strokec7 \}/api/dividend/$\{\cf6 \strokec6 symbol\cf8 \strokec8 .\cf11 \strokec11 toUpperCase\cf7 \strokec7 ()\}`\cf8 \strokec8 );\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf4 \strokec4 const\cf8 \strokec8  \cf12 \strokec12 result\cf8 \strokec8  = \cf14 \strokec14 await\cf6 \strokec6  \cf12 \strokec12 response\cf8 \strokec8 .\cf11 \strokec11 json\cf8 \strokec8 ();\cf5 \cb1 \strokec5 \
+\
+\cf8 \cb3 \strokec8                 \cf14 \strokec14 if\cf8 \strokec8  (\cf12 \strokec12 result\cf8 \strokec8 .\cf6 \strokec6 success\cf8 \strokec8 ) \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                     \cf14 \strokec14 return\cf6 \strokec6  \cf12 \strokec12 result\cf8 \strokec8 .\cf6 \strokec6 data\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \} \cf14 \strokec14 else\cf8 \strokec8  \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                     \cf14 \strokec14 throw\cf8 \strokec8  \cf4 \strokec4 new\cf8 \strokec8  \cf15 \strokec15 Error\cf8 \strokec8 (\cf12 \strokec12 result\cf8 \strokec8 .\cf6 \strokec6 message\cf8 \strokec8 );\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \}\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \} \cf14 \strokec14 catch\cf8 \strokec8  (\cf6 \strokec6 error\cf8 \strokec8 ) \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 console\cf8 \strokec8 .\cf11 \strokec11 log\cf8 \strokec8 (\cf7 \strokec7 'API not available, using mock data'\cf8 \strokec8 );\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf13 \strokec13 // Fall back to mock data\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf4 \strokec4 const\cf8 \strokec8  \cf12 \strokec12 upperSymbol\cf8 \strokec8  =\cf6 \strokec6  symbol\cf8 \strokec8 .\cf11 \strokec11 toUpperCase\cf8 \strokec8 ();\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf14 \strokec14 if\cf8 \strokec8  (\cf12 \strokec12 mockData\cf8 \strokec8 [\cf12 \strokec12 upperSymbol\cf8 \strokec8 ]) \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                     \cf14 \strokec14 return\cf6 \strokec6  \cf12 \strokec12 mockData\cf8 \strokec8 [\cf12 \strokec12 upperSymbol\cf8 \strokec8 ];\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \} \cf14 \strokec14 else\cf8 \strokec8  \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                     \cf14 \strokec14 throw\cf8 \strokec8  \cf4 \strokec4 new\cf8 \strokec8  \cf15 \strokec15 Error\cf8 \strokec8 (\cf7 \strokec7 `No data found for symbol: $\{\cf6 \strokec6 symbol\cf7 \strokec7 \}`\cf8 \strokec8 );\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \}\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \}\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8         \}\cf5 \cb1 \strokec5 \
+\
+\cf8 \cb3 \strokec8         \cf13 \strokec13 // Function to update the page with dividend data\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8         \cf4 \strokec4 function\cf8 \strokec8  \cf11 \strokec11 updatePageWithData\cf8 \strokec8 (\cf6 \strokec6 data\cf8 \strokec8 ) \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf13 \strokec13 // Update stock header\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 document\cf8 \strokec8 .\cf11 \strokec11 querySelector\cf8 \strokec8 (\cf7 \strokec7 '.stock-symbol'\cf8 \strokec8 ).\cf6 \strokec6 textContent\cf8 \strokec8  =\cf6 \strokec6  data\cf8 \strokec8 .\cf6 \strokec6 symbol\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 document\cf8 \strokec8 .\cf11 \strokec11 querySelector\cf8 \strokec8 (\cf7 \strokec7 '.company-name'\cf8 \strokec8 ).\cf6 \strokec6 textContent\cf8 \strokec8  =\cf6 \strokec6  data\cf8 \strokec8 .\cf6 \strokec6 companyName\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 document\cf8 \strokec8 .\cf11 \strokec11 querySelector\cf8 \strokec8 (\cf7 \strokec7 '.price'\cf8 \strokec8 ).\cf6 \strokec6 textContent\cf8 \strokec8  =\cf7 \strokec7  `$$\{\cf6 \strokec6 data\cf8 \strokec8 .\cf6 \strokec6 stockPrice\cf8 \strokec8 .\cf11 \strokec11 toFixed\cf7 \strokec7 (\cf9 \strokec9 2\cf7 \strokec7 )\}`\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\
+\cf8 \cb3 \strokec8             \cf4 \strokec4 const\cf8 \strokec8  \cf12 \strokec12 priceChangeElement\cf8 \strokec8  = \cf6 \strokec6 document\cf8 \strokec8 .\cf11 \strokec11 querySelector\cf8 \strokec8 (\cf7 \strokec7 '.price-change'\cf8 \strokec8 );\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf4 \strokec4 const\cf8 \strokec8  \cf12 \strokec12 changeSign\cf8 \strokec8  =\cf6 \strokec6  data\cf8 \strokec8 .\cf6 \strokec6 priceChange\cf8 \strokec8  >= \cf9 \strokec9 0\cf8 \strokec8  ? \cf7 \strokec7 '+'\cf8 \strokec8  : \cf7 \strokec7 ''\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \cb3 \strokec6             \cf12 \strokec12 priceChangeElement\cf8 \strokec8 .\cf6 \strokec6 textContent\cf8 \strokec8  =\cf7 \strokec7  `\uc0\u8599  $\{\cf12 \strokec12 changeSign\cf7 \strokec7 \}$\{\cf6 \strokec6 data\cf8 \strokec8 .\cf6 \strokec6 priceChange\cf8 \strokec8 .\cf11 \strokec11 toFixed\cf7 \strokec7 (\cf9 \strokec9 2\cf7 \strokec7 )\} ($\{\cf6 \strokec6 data\cf8 \strokec8 .\cf6 \strokec6 priceChangePercent\cf8 \strokec8 .\cf11 \strokec11 toFixed\cf7 \strokec7 (\cf9 \strokec9 2\cf7 \strokec7 )\}%)`\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf6 \cb3 \strokec6             \cf12 \strokec12 priceChangeElement\cf8 \strokec8 .\cf6 \strokec6 style\cf8 \strokec8 .\cf6 \strokec6 color\cf8 \strokec8  =\cf6 \strokec6  data\cf8 \strokec8 .\cf6 \strokec6 priceChange\cf8 \strokec8  >= \cf9 \strokec9 0\cf8 \strokec8  ? \cf7 \strokec7 '#22c55e'\cf8 \strokec8  : \cf7 \strokec7 '#ef4444'\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf8 \cb3 \strokec8             \cf13 \strokec13 // Update stats cards\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf4 \strokec4 const\cf8 \strokec8  \cf12 \strokec12 statCards\cf8 \strokec8  = \cf6 \strokec6 document\cf8 \strokec8 .\cf11 \strokec11 querySelectorAll\cf8 \strokec8 (\cf7 \strokec7 '.stat-card'\cf8 \strokec8 );\cf5 \cb1 \strokec5 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \cb3 \strokec6             \cf12 \strokec12 statCards\cf8 \strokec8 [\cf9 \strokec9 0\cf8 \strokec8 ].\cf11 \strokec11 querySelector\cf8 \strokec8 (\cf7 \strokec7 '.stat-value'\cf8 \strokec8 ).\cf6 \strokec6 textContent\cf8 \strokec8  =\cf6 \strokec6  data\cf8 \strokec8 .\cf6 \strokec6 symbol\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf6 \cb3 \strokec6             \cf12 \strokec12 statCards\cf8 \strokec8 [\cf9 \strokec9 1\cf8 \strokec8 ].\cf11 \strokec11 querySelector\cf8 \strokec8 (\cf7 \strokec7 '.stat-value'\cf8 \strokec8 ).\cf6 \strokec6 textContent\cf8 \strokec8  =\cf6 \strokec6  data\cf8 \strokec8 .\cf6 \strokec6 companyName\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf6 \cb3 \strokec6             \cf12 \strokec12 statCards\cf8 \strokec8 [\cf9 \strokec9 2\cf8 \strokec8 ].\cf11 \strokec11 querySelector\cf8 \strokec8 (\cf7 \strokec7 '.stat-value'\cf8 \strokec8 ).\cf6 \strokec6 textContent\cf8 \strokec8  =\cf6 \strokec6  data\cf8 \strokec8 .\cf6 \strokec6 industry\cf8 \strokec8  || \cf7 \strokec7 '-'\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf6 \cb3 \strokec6             \cf12 \strokec12 statCards\cf8 \strokec8 [\cf9 \strokec9 3\cf8 \strokec8 ].\cf11 \strokec11 querySelector\cf8 \strokec8 (\cf7 \strokec7 '.stat-value'\cf8 \strokec8 ).\cf6 \strokec6 textContent\cf8 \strokec8  =\cf6 \strokec6  data\cf8 \strokec8 .\cf6 \strokec6 marketCap\cf8 \strokec8  || \cf7 \strokec7 '-'\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf6 \cb3 \strokec6             \cf12 \strokec12 statCards\cf8 \strokec8 [\cf9 \strokec9 4\cf8 \strokec8 ].\cf11 \strokec11 querySelector\cf8 \strokec8 (\cf7 \strokec7 '.stat-value'\cf8 \strokec8 ).\cf6 \strokec6 textContent\cf8 \strokec8  =\cf7 \strokec7  `$$\{\cf6 \strokec6 data\cf8 \strokec8 .\cf6 \strokec6 stockPrice\cf8 \strokec8 .\cf11 \strokec11 toFixed\cf7 \strokec7 (\cf9 \strokec9 2\cf7 \strokec7 )\}`\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf6 \cb3 \strokec6             \cf12 \strokec12 statCards\cf8 \strokec8 [\cf9 \strokec9 5\cf8 \strokec8 ].\cf11 \strokec11 querySelector\cf8 \strokec8 (\cf7 \strokec7 '.stat-value'\cf8 \strokec8 ).\cf6 \strokec6 textContent\cf8 \strokec8  =\cf6 \strokec6  data\cf8 \strokec8 .\cf6 \strokec6 pe\cf8 \strokec8  || \cf7 \strokec7 '-'\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf6 \cb3 \strokec6             \cf12 \strokec12 statCards\cf8 \strokec8 [\cf9 \strokec9 6\cf8 \strokec8 ].\cf11 \strokec11 querySelector\cf8 \strokec8 (\cf7 \strokec7 '.stat-value'\cf8 \strokec8 ).\cf6 \strokec6 textContent\cf8 \strokec8  =\cf7 \strokec7  `$\{\cf6 \strokec6 data\cf8 \strokec8 .\cf6 \strokec6 dividendYield\cf8 \strokec8 .\cf11 \strokec11 toFixed\cf7 \strokec7 (\cf9 \strokec9 2\cf7 \strokec7 )\}%`\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf6 \cb3 \strokec6             \cf12 \strokec12 statCards\cf8 \strokec8 [\cf9 \strokec9 7\cf8 \strokec8 ].\cf11 \strokec11 querySelector\cf8 \strokec8 (\cf7 \strokec7 '.stat-value'\cf8 \strokec8 ).\cf6 \strokec6 textContent\cf8 \strokec8  =\cf7 \strokec7  `$$\{\cf6 \strokec6 data\cf8 \strokec8 .\cf6 \strokec6 annualPayout\cf8 \strokec8 .\cf11 \strokec11 toFixed\cf7 \strokec7 (\cf9 \strokec9 2\cf7 \strokec7 )\}`\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf6 \cb3 \strokec6             \cf12 \strokec12 statCards\cf8 \strokec8 [\cf9 \strokec9 8\cf8 \strokec8 ].\cf11 \strokec11 querySelector\cf8 \strokec8 (\cf7 \strokec7 '.stat-value'\cf8 \strokec8 ).\cf6 \strokec6 textContent\cf8 \strokec8  =\cf7 \strokec7  `$\{\cf6 \strokec6 data\cf8 \strokec8 .\cf6 \strokec6 payoutRatio\cf8 \strokec8 .\cf11 \strokec11 toFixed\cf7 \strokec7 (\cf9 \strokec9 1\cf7 \strokec7 )\}%`\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf6 \cb3 \strokec6             \cf12 \strokec12 statCards\cf8 \strokec8 [\cf9 \strokec9 9\cf8 \strokec8 ].\cf11 \strokec11 querySelector\cf8 \strokec8 (\cf7 \strokec7 '.stat-value'\cf8 \strokec8 ).\cf6 \strokec6 textContent\cf8 \strokec8  =\cf7 \strokec7  `$\{\cf6 \strokec6 data\cf8 \strokec8 .\cf6 \strokec6 growthStreak\cf7 \strokec7 \} Yrs`\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf8 \cb3 \strokec8             \cf13 \strokec13 // Update payment schedule\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf4 \strokec4 const\cf8 \strokec8  \cf12 \strokec12 paymentItems\cf8 \strokec8  = \cf6 \strokec6 document\cf8 \strokec8 .\cf11 \strokec11 querySelectorAll\cf8 \strokec8 (\cf7 \strokec7 '.payment-item'\cf8 \strokec8 );\cf5 \cb1 \strokec5 \
+\pard\pardeftab720\partightenfactor0
+\cf6 \cb3 \strokec6             \cf12 \strokec12 paymentItems\cf8 \strokec8 [\cf9 \strokec9 0\cf8 \strokec8 ].\cf11 \strokec11 querySelector\cf8 \strokec8 (\cf7 \strokec7 '.payment-value'\cf8 \strokec8 ).\cf6 \strokec6 textContent\cf8 \strokec8  =\cf6 \strokec6  data\cf8 \strokec8 .\cf6 \strokec6 paymentSchedule\cf8 \strokec8 .\cf6 \strokec6 frequency\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf6 \cb3 \strokec6             \cf12 \strokec12 paymentItems\cf8 \strokec8 [\cf9 \strokec9 1\cf8 \strokec8 ].\cf11 \strokec11 querySelector\cf8 \strokec8 (\cf7 \strokec7 '.payment-value'\cf8 \strokec8 ).\cf6 \strokec6 textContent\cf8 \strokec8  =\cf7 \strokec7  `\uc0\u55357 \u56517  $\{\cf6 \strokec6 data\cf8 \strokec8 .\cf6 \strokec6 paymentSchedule\cf8 \strokec8 .\cf6 \strokec6 exDividendDate\cf7 \strokec7 \}`\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf6 \cb3 \strokec6             \cf12 \strokec12 paymentItems\cf8 \strokec8 [\cf9 \strokec9 2\cf8 \strokec8 ].\cf11 \strokec11 querySelector\cf8 \strokec8 (\cf7 \strokec7 '.payment-value'\cf8 \strokec8 ).\cf6 \strokec6 textContent\cf8 \strokec8  =\cf7 \strokec7  `\uc0\u55357 \u56498  $\{\cf6 \strokec6 data\cf8 \strokec8 .\cf6 \strokec6 paymentSchedule\cf8 \strokec8 .\cf6 \strokec6 nextPayment\cf7 \strokec7 \}`\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf6 \cb3 \strokec6             \cf12 \strokec12 paymentItems\cf8 \strokec8 [\cf9 \strokec9 3\cf8 \strokec8 ].\cf11 \strokec11 querySelector\cf8 \strokec8 (\cf7 \strokec7 '.payment-value'\cf8 \strokec8 ).\cf6 \strokec6 textContent\cf8 \strokec8  =\cf7 \strokec7  `\uc0\u55357 \u56523  $\{\cf6 \strokec6 data\cf8 \strokec8 .\cf6 \strokec6 paymentSchedule\cf8 \strokec8 .\cf6 \strokec6 recordDate\cf7 \strokec7 \}`\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf6 \cb3 \strokec6             \cf12 \strokec12 paymentItems\cf8 \strokec8 [\cf9 \strokec9 4\cf8 \strokec8 ].\cf11 \strokec11 querySelector\cf8 \strokec8 (\cf7 \strokec7 '.payment-value'\cf8 \strokec8 ).\cf6 \strokec6 textContent\cf8 \strokec8  =\cf7 \strokec7  `$$\{\cf6 \strokec6 data\cf8 \strokec8 .\cf6 \strokec6 paymentSchedule\cf8 \strokec8 .\cf6 \strokec6 paymentAmount\cf8 \strokec8 .\cf11 \strokec11 toFixed\cf7 \strokec7 (\cf9 \strokec9 3\cf7 \strokec7 )\}`\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf6 \cb3 \strokec6             \cf12 \strokec12 paymentItems\cf8 \strokec8 [\cf9 \strokec9 5\cf8 \strokec8 ].\cf11 \strokec11 querySelector\cf8 \strokec8 (\cf7 \strokec7 '.payment-value'\cf8 \strokec8 ).\cf6 \strokec6 textContent\cf8 \strokec8  =\cf7 \strokec7  `$\{\cf6 \strokec6 data\cf8 \strokec8 .\cf6 \strokec6 paymentSchedule\cf8 \strokec8 .\cf6 \strokec6 annualYield\cf8 \strokec8 .\cf11 \strokec11 toFixed\cf7 \strokec7 (\cf9 \strokec9 2\cf7 \strokec7 )\}%`\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf6 \cb3 \strokec6             \cf12 \strokec12 paymentItems\cf8 \strokec8 [\cf9 \strokec9 6\cf8 \strokec8 ].\cf11 \strokec11 querySelector\cf8 \strokec8 (\cf7 \strokec7 '.payment-value'\cf8 \strokec8 ).\cf6 \strokec6 textContent\cf8 \strokec8  =\cf7 \strokec7  `\uc0\u55357 \u56520  $\{\cf6 \strokec6 data\cf8 \strokec8 .\cf6 \strokec6 paymentSchedule\cf8 \strokec8 .\cf6 \strokec6 lastIncrease\cf7 \strokec7 \}`\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf6 \cb3 \strokec6             \cf12 \strokec12 paymentItems\cf8 \strokec8 [\cf9 \strokec9 7\cf8 \strokec8 ].\cf11 \strokec11 querySelector\cf8 \strokec8 (\cf7 \strokec7 '.payment-value'\cf8 \strokec8 ).\cf6 \strokec6 textContent\cf8 \strokec8  =\cf7 \strokec7  `+$\{\cf6 \strokec6 data\cf8 \strokec8 .\cf6 \strokec6 paymentSchedule\cf8 \strokec8 .\cf6 \strokec6 fiveYearGrowth\cf8 \strokec8 .\cf11 \strokec11 toFixed\cf7 \strokec7 (\cf9 \strokec9 1\cf7 \strokec7 )\}%`\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf6 \cb3 \strokec6             \cf12 \strokec12 paymentItems\cf8 \strokec8 [\cf9 \strokec9 8\cf8 \strokec8 ].\cf11 \strokec11 querySelector\cf8 \strokec8 (\cf7 \strokec7 '.payment-value'\cf8 \strokec8 ).\cf6 \strokec6 textContent\cf8 \strokec8  =\cf6 \strokec6  data\cf8 \strokec8 .\cf6 \strokec6 paymentSchedule\cf8 \strokec8 .\cf6 \strokec6 dividendKing\cf8 \strokec8  ? \cf7 \strokec7 '\uc0\u55357 \u56401  Yes'\cf8 \strokec8  : \cf7 \strokec7 '\uc0\u10060  No'\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf8 \cb3 \strokec8             \cf13 \strokec13 // Update description\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 document\cf8 \strokec8 .\cf11 \strokec11 querySelector\cf8 \strokec8 (\cf7 \strokec7 '.description'\cf8 \strokec8 ).\cf6 \strokec6 textContent\cf8 \strokec8  =\cf6 \strokec6  data\cf8 \strokec8 .\cf6 \strokec6 description\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8         \}\cf5 \cb1 \strokec5 \
+\
+\cf8 \cb3 \strokec8         \cf13 \strokec13 // Function to handle search\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8         \cf4 \strokec4 async\cf8 \strokec8  \cf4 \strokec4 function\cf8 \strokec8  \cf11 \strokec11 handleSearch\cf8 \strokec8 () \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf4 \strokec4 const\cf8 \strokec8  \cf12 \strokec12 searchInput\cf8 \strokec8  = \cf6 \strokec6 document\cf8 \strokec8 .\cf11 \strokec11 getElementById\cf8 \strokec8 (\cf7 \strokec7 'searchInput'\cf8 \strokec8 );\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf4 \strokec4 const\cf8 \strokec8  \cf12 \strokec12 symbol\cf8 \strokec8  =\cf6 \strokec6  \cf12 \strokec12 searchInput\cf8 \strokec8 .\cf6 \strokec6 value\cf8 \strokec8 .\cf11 \strokec11 trim\cf8 \strokec8 ();\cf5 \cb1 \strokec5 \
+\
+\cf8 \cb3 \strokec8             \cf14 \strokec14 if\cf8 \strokec8  (!\cf12 \strokec12 symbol\cf8 \strokec8 ) \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf11 \strokec11 alert\cf8 \strokec8 (\cf7 \strokec7 'Please enter a stock symbol'\cf8 \strokec8 );\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf14 \strokec14 return\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \}\cf5 \cb1 \strokec5 \
+\
+\cf8 \cb3 \strokec8             \cf13 \strokec13 // Show loading, hide content and error\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 document\cf8 \strokec8 .\cf11 \strokec11 getElementById\cf8 \strokec8 (\cf7 \strokec7 'loadingMessage'\cf8 \strokec8 ).\cf6 \strokec6 style\cf8 \strokec8 .\cf6 \strokec6 display\cf8 \strokec8  = \cf7 \strokec7 'block'\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 document\cf8 \strokec8 .\cf11 \strokec11 getElementById\cf8 \strokec8 (\cf7 \strokec7 'stockData'\cf8 \strokec8 ).\cf6 \strokec6 style\cf8 \strokec8 .\cf6 \strokec6 display\cf8 \strokec8  = \cf7 \strokec7 'none'\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf6 \strokec6 document\cf8 \strokec8 .\cf11 \strokec11 getElementById\cf8 \strokec8 (\cf7 \strokec7 'errorMessage'\cf8 \strokec8 ).\cf6 \strokec6 style\cf8 \strokec8 .\cf6 \strokec6 display\cf8 \strokec8  = \cf7 \strokec7 'none'\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\
+\cf8 \cb3 \strokec8             \cf14 \strokec14 try\cf8 \strokec8  \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf4 \strokec4 const\cf8 \strokec8  \cf12 \strokec12 data\cf8 \strokec8  = \cf14 \strokec14 await\cf8 \strokec8  \cf11 \strokec11 fetchDividendData\cf8 \strokec8 (\cf12 \strokec12 symbol\cf8 \strokec8 );\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf11 \strokec11 updatePageWithData\cf8 \strokec8 (\cf12 \strokec12 data\cf8 \strokec8 );\cf5 \cb1 \strokec5 \
+\
+\cf8 \cb3 \strokec8                 \cf13 \strokec13 // Show content, hide loading and error\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 document\cf8 \strokec8 .\cf11 \strokec11 getElementById\cf8 \strokec8 (\cf7 \strokec7 'loadingMessage'\cf8 \strokec8 ).\cf6 \strokec6 style\cf8 \strokec8 .\cf6 \strokec6 display\cf8 \strokec8  = \cf7 \strokec7 'none'\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 document\cf8 \strokec8 .\cf11 \strokec11 getElementById\cf8 \strokec8 (\cf7 \strokec7 'stockData'\cf8 \strokec8 ).\cf6 \strokec6 style\cf8 \strokec8 .\cf6 \strokec6 display\cf8 \strokec8  = \cf7 \strokec7 'block'\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 document\cf8 \strokec8 .\cf11 \strokec11 getElementById\cf8 \strokec8 (\cf7 \strokec7 'errorMessage'\cf8 \strokec8 ).\cf6 \strokec6 style\cf8 \strokec8 .\cf6 \strokec6 display\cf8 \strokec8  = \cf7 \strokec7 'none'\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \} \cf14 \strokec14 catch\cf8 \strokec8  (\cf6 \strokec6 error\cf8 \strokec8 ) \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf13 \strokec13 // Show error, hide loading and content\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 document\cf8 \strokec8 .\cf11 \strokec11 getElementById\cf8 \strokec8 (\cf7 \strokec7 'loadingMessage'\cf8 \strokec8 ).\cf6 \strokec6 style\cf8 \strokec8 .\cf6 \strokec6 display\cf8 \strokec8  = \cf7 \strokec7 'none'\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 document\cf8 \strokec8 .\cf11 \strokec11 getElementById\cf8 \strokec8 (\cf7 \strokec7 'stockData'\cf8 \strokec8 ).\cf6 \strokec6 style\cf8 \strokec8 .\cf6 \strokec6 display\cf8 \strokec8  = \cf7 \strokec7 'none'\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf6 \strokec6 document\cf8 \strokec8 .\cf11 \strokec11 getElementById\cf8 \strokec8 (\cf7 \strokec7 'errorMessage'\cf8 \strokec8 ).\cf6 \strokec6 style\cf8 \strokec8 .\cf6 \strokec6 display\cf8 \strokec8  = \cf7 \strokec7 'block'\cf8 \strokec8 ;\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \}\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8         \}\cf5 \cb1 \strokec5 \
+\
+\cf8 \cb3 \strokec8         \cf13 \strokec13 // Event listeners\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8         \cf6 \strokec6 document\cf8 \strokec8 .\cf11 \strokec11 getElementById\cf8 \strokec8 (\cf7 \strokec7 'searchButton'\cf8 \strokec8 ).\cf11 \strokec11 addEventListener\cf8 \strokec8 (\cf7 \strokec7 'click'\cf8 \strokec8 , \cf11 \strokec11 handleSearch\cf8 \strokec8 );\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8         \cf6 \strokec6 document\cf8 \strokec8 .\cf11 \strokec11 getElementById\cf8 \strokec8 (\cf7 \strokec7 'searchInput'\cf8 \strokec8 ).\cf11 \strokec11 addEventListener\cf8 \strokec8 (\cf7 \strokec7 'keypress'\cf8 \strokec8 , (\cf6 \strokec6 e\cf8 \strokec8 ) \cf4 \strokec4 =>\cf8 \strokec8  \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf14 \strokec14 if\cf8 \strokec8  (\cf6 \strokec6 e\cf8 \strokec8 .\cf6 \strokec6 key\cf8 \strokec8  === \cf7 \strokec7 'Enter'\cf8 \strokec8 ) \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8                 \cf11 \strokec11 handleSearch\cf8 \strokec8 ();\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \}\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8         \});\cf5 \cb1 \strokec5 \
+\
+\cf8 \cb3 \strokec8         \cf13 \strokec13 // Load default stock on page load\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8         \cf6 \strokec6 window\cf8 \strokec8 .\cf11 \strokec11 addEventListener\cf8 \strokec8 (\cf7 \strokec7 'load'\cf8 \strokec8 , () \cf4 \strokec4 =>\cf8 \strokec8  \{\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8             \cf11 \strokec11 handleSearch\cf8 \strokec8 ();\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8         \});\cf5 \cb1 \strokec5 \
+\cf8 \cb3 \strokec8     \cf2 \strokec2 </\cf4 \strokec4 script\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec2 </\cf4 \strokec4 body\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\
+\cf2 \cb3 \strokec2 </\cf4 \strokec4 html\cf2 \strokec2 >\cf5 \cb1 \strokec5 \
+\
+}
