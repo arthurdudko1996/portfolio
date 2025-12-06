@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dividend Scout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background-color: #f5f5f5;
+            padding: 40px 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h1 {
+            font-size: 56px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .search-container {
+            margin-bottom: 60px;
+        }
+
+        .search-box {
+            position: relative;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 16px 60px 16px 24px;
+            border: 1px solid #ddd;
+            border-radius: 50px;
+            font-size: 16px;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+
+        .search-input:focus {
+            border-color: #333;
+        }
+
+        .search-button {
+            position: absolute;
+            right: 8px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: #1a1a1a;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .search-button::before {
+            content: "🔍";
+            filter: invert(1);
+        }
+
+        .search-hint {
+            text-align: center;
+            color: #666;
+            font-size: 14px;
+            margin-top: 12px;
+        }
+
+        .stock-header {
+            margin-bottom: 40px;
+        }
+
+        .stock-symbol {
+            font-size: 48px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin-bottom: 8px;
+        }
+
+        .company-name {
+            font-size: 18px;
+            color: #666;
+            margin-bottom: 16px;
+        }
+
+        .stock-price {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 12px;
+        }
+
+        .price {
+            font-size: 36px;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+
+        .price-change {
+            font-size: 16px;
+            color: #22c55e;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .stat-card {
+            background: white;
+            border-radius: 16px;
+            padding: 28px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+
+        .stat-card.dark {
+            background: #2a2d3a;
+            color: white;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .stat-card.dark .stat-label {
+            color: #a0a0a0;
+        }
+
+        .stat-value {
+            font-size: 32px;
+            font-weight: 700;
+            color: #1a1a1a;
+        }
+
+        .stat-card.dark .stat-value {
+            color: white;
+        }
+
+        .stat-subtitle {
+            font-size: 13px;
+            color: #22c55e;
+            margin-top: 8px;
+        }
+
+        .payment-schedule {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 40px;
+            color: #1a1a1a;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+
+        .payment-schedule h2 {
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #666;
+            margin-bottom: 32px;
+            font-weight: 500;
+        }
+
+        .payment-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
+        }
+
+        .payment-item {
+            background: #f9f9f9;
+            border-radius: 12px;
+            padding: 20px;
+        }
+
+        .payment-label {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 8px;
+        }
+
+        .payment-value {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        .description {
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            font-size: 16px;
+        }
+
+        .dividend-history {
+            background: white;
+            border-radius: 16px;
+            padding: 32px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+        }
+
+        .dividend-history h2 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .dividend-history p {
+            color: #666;
+            font-size: 14px;
+            margin-bottom: 24px;
+        }
+
+        .chart-placeholder {
+            height: 200px;
+            background: linear-gradient(to top, #e5e7eb 0%, #e5e7eb 20%, transparent 20%);
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .chart-bars {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 100%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-around;
+            padding: 0 20px;
+        }
+
+        .chart-bar {
+            width: 40px;
+            background: linear-gradient(to top, #1a1a1a, #4a4a4a);
+            border-radius: 4px 4px 0 0;
+            transition: opacity 0.3s;
+        }
+
+        .chart-bar:hover {
+            opacity: 0.8;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Dividend Scout</h1>
+
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" class="search-input" id="searchInput" placeholder="ko" value="ko">
+                <button class="search-button" id="searchButton"></button>
+            </div>
+            <p class="search-hint">Try searching for 0, KO, or AAPL</p>
+        </div>
+
+        <div id="loadingMessage" style="display: none; text-align: center; padding: 40px; color: #666;">
+            Loading dividend data...
+        </div>
+
+        <div id="errorMessage" style="display: none; text-align: center; padding: 40px; color: #ef4444;">
+            <h3>Stock not found</h3>
+            <p>Please try another symbol</p>
+        </div>
+
+        <div id="stockData" style="display: block;">
+
+            <div class="stock-header" style="display: flex; justify-content: space-between; align-items: flex-start;">
+                <div>
+                    <div class="stock-symbol">KO</div>
+                    <div class="company-name">The Coca-Cola Company</div>
+                </div>
+                <div class="stock-price">
+                    <div class="price">$61.88</div>
+                    <div class="price-change">
+                        ↗ +0.12 (0.19%)
+                    </div>
+                </div>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-label">Symbol</div>
+                    <div class="stat-value">KO</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Company Name</div>
+                    <div class="stat-value">Coca-Cola</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Industry</div>
+                    <div class="stat-value">Beverages</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Market Cap</div>
+                    <div class="stat-value">$267B</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Stock Price</div>
+                    <div class="stat-value">$61.88</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">PE</div>
+                    <div class="stat-value">-</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Div. Yield</div>
+                    <div class="stat-value">3.12%</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Annual Payout</div>
+                    <div class="stat-value">$1.94</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Payout Ratio</div>
+                    <div class="stat-value">68.5%</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-label">Growth Streak</div>
+                    <div class="stat-value">62 Yrs</div>
+                </div>
+            </div>
+
+            <div class="payment-schedule">
+                <h2>PAYMENT SCHEDULE</h2>
+                <div class="payment-grid">
+                    <div class="payment-item">
+                        <div class="payment-label">Frequency</div>
+                        <div class="payment-value">Quarterly</div>
+                    </div>
+                    <div class="payment-item">
+                        <div class="payment-label">Ex-Dividend Date</div>
+                        <div class="payment-value">📅 2024-11-29</div>
+                    </div>
+                    <div class="payment-item">
+                        <div class="payment-label">Next Payment</div>
+                        <div class="payment-value">💲 2024-12-16</div>
+                    </div>
+                    <div class="payment-item">
+                        <div class="payment-label">Record Date</div>
+                        <div class="payment-value">📋 2024-12-01</div>
+                    </div>
+                    <div class="payment-item">
+                        <div class="payment-label">Payment Amount</div>
+                        <div class="payment-value">$0.485</div>
+                    </div>
+                    <div class="payment-item">
+                        <div class="payment-label">Annual Yield</div>
+                        <div class="payment-value">3.12%</div>
+                    </div>
+                    <div class="payment-item">
+                        <div class="payment-label">Last Increase</div>
+                        <div class="payment-value">📈 Feb 2024</div>
+                    </div>
+                    <div class="payment-item">
+                        <div class="payment-label">5-Year Growth</div>
+                        <div class="payment-value">+18.5%</div>
+                    </div>
+                </div>
+            </div>
+
+            <p class="description">
+                The Coca-Cola Company is a total beverage company, offering over 500 brands in more than 200 countries
+                and
+                territories.
+            </p>
+
+            <div class="dividend-history">
+                <h2>Dividend History</h2>
+                <p>Recent payout amounts per share</p>
+                <div class="chart-placeholder">
+                    <div class="chart-bars">
+                        <div class="chart-bar" style="height: 45%;"></div>
+                        <div class="chart-bar" style="height: 50%;"></div>
+                        <div class="chart-bar" style="height: 55%;"></div>
+                        <div class="chart-bar" style="height: 60%;"></div>
+                        <div class="chart-bar" style="height: 65%;"></div>
+                        <div class="chart-bar" style="height: 70%;"></div>
+                        <div class="chart-bar" style="height: 75%;"></div>
+                        <div class="chart-bar" style="height: 80%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const API_BASE_URL = 'http://localhost:3000';
+
+        // Mock data for testing (when API is not available)
+        const mockData = {
+            'KO': {
+                symbol: 'KO',
+                companyName: 'The Coca-Cola Company',
+                industry: 'Beverages',
+                marketCap: '$267B',
+                stockPrice: 61.88,
+                priceChange: 0.12,
+                priceChangePercent: 0.19,
+                dividendYield: 3.12,
+                annualPayout: 1.94,
+                payoutRatio: 68.5,
+                payoutRatioStatus: 'Healthy',
+                growthStreak: 62,
+                paymentSchedule: {
+                    frequency: 'Quarterly',
+                    exDividendDate: '2024-11-29',
+                    nextPayment: '2024-12-16',
+                    recordDate: '2024-12-01',
+                    paymentAmount: 0.485,
+                    annualYield: 3.12,
+                    lastIncrease: 'Feb 2024',
+                    fiveYearGrowth: 18.5,
+                    dividendKing: true
+                },
+                description: 'The Coca-Cola Company is a total beverage company, offering over 500 brands in more than 200 countries and territories.'
+            },
+            'AAPL': {
+                symbol: 'AAPL',
+                companyName: 'Apple Inc.',
+                industry: 'Technology',
+                marketCap: '$2.89T',
+                stockPrice: 189.45,
+                priceChange: 2.15,
+                priceChangePercent: 1.15,
+                dividendYield: 0.47,
+                annualPayout: 0.96,
+                payoutRatio: 15.2,
+                payoutRatioStatus: 'Very Healthy',
+                growthStreak: 12,
+                paymentSchedule: {
+                    frequency: 'Quarterly',
+                    exDividendDate: '2024-11-08',
+                    nextPayment: '2024-11-14',
+                    recordDate: '2024-11-11',
+                    paymentAmount: 0.24,
+                    annualYield: 0.47,
+                    lastIncrease: 'Feb 2024',
+                    fiveYearGrowth: 8.2,
+                    dividendKing: false
+                },
+                description: 'Apple Inc. designs, manufactures, and markets smartphones, personal computers, tablets, wearables, and accessories worldwide.'
+            },
+            'JNJ': {
+                symbol: 'JNJ',
+                companyName: 'Johnson & Johnson',
+                industry: 'Healthcare',
+                marketCap: '$385B',
+                stockPrice: 156.32,
+                priceChange: -0.45,
+                priceChangePercent: -0.29,
+                dividendYield: 3.05,
+                annualPayout: 4.76,
+                payoutRatio: 45.8,
+                payoutRatioStatus: 'Healthy',
+                growthStreak: 62,
+                paymentSchedule: {
+                    frequency: 'Quarterly',
+                    exDividendDate: '2024-11-22',
+                    nextPayment: '2024-12-10',
+                    recordDate: '2024-11-25',
+                    paymentAmount: 1.19,
+                    annualYield: 3.05,
+                    lastIncrease: 'Apr 2024',
+                    fiveYearGrowth: 5.8,
+                    dividendKing: true
+                },
+                description: 'Johnson & Johnson is a holding company engaged in the research and development, manufacture and sale of a broad range of products in the healthcare field.'
+            },
+            'PG': {
+                symbol: 'PG',
+                companyName: 'Procter & Gamble',
+                industry: 'Consumer Goods',
+                marketCap: '$365B',
+                stockPrice: 152.18,
+                priceChange: 1.23,
+                priceChangePercent: 0.81,
+                dividendYield: 2.45,
+                annualPayout: 3.73,
+                payoutRatio: 58.2,
+                payoutRatioStatus: 'Healthy',
+                growthStreak: 68,
+                paymentSchedule: {
+                    frequency: 'Quarterly',
+                    exDividendDate: '2024-10-18',
+                    nextPayment: '2024-11-15',
+                    recordDate: '2024-10-21',
+                    paymentAmount: 0.9338,
+                    annualYield: 2.45,
+                    lastIncrease: 'Apr 2024',
+                    fiveYearGrowth: 4.5,
+                    dividendKing: true
+                },
+                description: 'The Procter & Gamble Company provides branded consumer packaged goods to consumers in North America, Europe, the Asia Pacific, Greater China, Latin America, India, the Middle East, and Africa.'
+            }
+        };
+
+        // Function to fetch dividend data
+        async function fetchDividendData(symbol) {
+            try {
+                // Try to fetch from API first
+                const response = await fetch(`${API_BASE_URL}/api/dividend/${symbol.toUpperCase()}`);
+                const result = await response.json();
+
+                if (result.success) {
+                    return result.data;
+                } else {
+                    throw new Error(result.message);
+                }
+            } catch (error) {
+                console.log('API not available, using mock data');
+                // Fall back to mock data
+                const upperSymbol = symbol.toUpperCase();
+                if (mockData[upperSymbol]) {
+                    return mockData[upperSymbol];
+                } else {
+                    throw new Error(`No data found for symbol: ${symbol}`);
+                }
+            }
+        }
+
+        // Function to update the page with dividend data
+        function updatePageWithData(data) {
+            // Update stock header
+            document.querySelector('.stock-symbol').textContent = data.symbol;
+            document.querySelector('.company-name').textContent = data.companyName;
+            document.querySelector('.price').textContent = `$${data.stockPrice.toFixed(2)}`;
+
+            const priceChangeElement = document.querySelector('.price-change');
+            const changeSign = data.priceChange >= 0 ? '+' : '';
+            priceChangeElement.textContent = `↗ ${changeSign}${data.priceChange.toFixed(2)} (${data.priceChangePercent.toFixed(2)}%)`;
+            priceChangeElement.style.color = data.priceChange >= 0 ? '#22c55e' : '#ef4444';
+
+            // Update stats cards
+            const statCards = document.querySelectorAll('.stat-card');
+            statCards[0].querySelector('.stat-value').textContent = data.symbol;
+            statCards[1].querySelector('.stat-value').textContent = data.companyName;
+            statCards[2].querySelector('.stat-value').textContent = data.industry || '-';
+            statCards[3].querySelector('.stat-value').textContent = data.marketCap || '-';
+            statCards[4].querySelector('.stat-value').textContent = `$${data.stockPrice.toFixed(2)}`;
+            statCards[5].querySelector('.stat-value').textContent = data.pe || '-';
+            statCards[6].querySelector('.stat-value').textContent = `${data.dividendYield.toFixed(2)}%`;
+            statCards[7].querySelector('.stat-value').textContent = `$${data.annualPayout.toFixed(2)}`;
+            statCards[8].querySelector('.stat-value').textContent = `${data.payoutRatio.toFixed(1)}%`;
+            statCards[9].querySelector('.stat-value').textContent = `${data.growthStreak} Yrs`;
+
+            // Update payment schedule
+            const paymentItems = document.querySelectorAll('.payment-item');
+            paymentItems[0].querySelector('.payment-value').textContent = data.paymentSchedule.frequency;
+            paymentItems[1].querySelector('.payment-value').textContent = `📅 ${data.paymentSchedule.exDividendDate}`;
+            paymentItems[2].querySelector('.payment-value').textContent = `💲 ${data.paymentSchedule.nextPayment}`;
+            paymentItems[3].querySelector('.payment-value').textContent = `📋 ${data.paymentSchedule.recordDate}`;
+            paymentItems[4].querySelector('.payment-value').textContent = `$${data.paymentSchedule.paymentAmount.toFixed(3)}`;
+            paymentItems[5].querySelector('.payment-value').textContent = `${data.paymentSchedule.annualYield.toFixed(2)}%`;
+            paymentItems[6].querySelector('.payment-value').textContent = `📈 ${data.paymentSchedule.lastIncrease}`;
+            paymentItems[7].querySelector('.payment-value').textContent = `+${data.paymentSchedule.fiveYearGrowth.toFixed(1)}%`;
+            paymentItems[8].querySelector('.payment-value').textContent = data.paymentSchedule.dividendKing ? '👑 Yes' : '❌ No';
+
+            // Update description
+            document.querySelector('.description').textContent = data.description;
+        }
+
+        // Function to handle search
+        async function handleSearch() {
+            const searchInput = document.getElementById('searchInput');
+            const symbol = searchInput.value.trim();
+
+            if (!symbol) {
+                alert('Please enter a stock symbol');
+                return;
+            }
+
+            // Show loading, hide content and error
+            document.getElementById('loadingMessage').style.display = 'block';
+            document.getElementById('stockData').style.display = 'none';
+            document.getElementById('errorMessage').style.display = 'none';
+
+            try {
+                const data = await fetchDividendData(symbol);
+                updatePageWithData(data);
+
+                // Show content, hide loading and error
+                document.getElementById('loadingMessage').style.display = 'none';
+                document.getElementById('stockData').style.display = 'block';
+                document.getElementById('errorMessage').style.display = 'none';
+            } catch (error) {
+                // Show error, hide loading and content
+                document.getElementById('loadingMessage').style.display = 'none';
+                document.getElementById('stockData').style.display = 'none';
+                document.getElementById('errorMessage').style.display = 'block';
+            }
+        }
+
+        // Event listeners
+        document.getElementById('searchButton').addEventListener('click', handleSearch);
+        document.getElementById('searchInput').addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                handleSearch();
+            }
+        });
+
+        // Load default stock on page load
+        window.addEventListener('load', () => {
+            handleSearch();
+        });
+    </script>
+</body>
+
+</html>
