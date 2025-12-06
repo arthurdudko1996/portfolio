@@ -1,0 +1,212 @@
+const express = require('express');
+const cors = require('cors');
+const fs = require('fs');
+const path = require('path');
+const XLSX = require('xlsx');
+const app = express();
+const port = 3000;
+
+// Enable CORS for frontend requests
+app.use(cors());
+app.use(express.json());
+
+// File paths
+const CSV_FILE_PATH = path.join(__dirname, 'dividend-data.csv');
+const EXCEL_FILE_PATH = path.join(__dirname, 'dividend-data.xlsx');
+
+// Function to parse Excel file
+function parseExcel(filePath) {
+    const workbook = XLSX.readFile(filePath);
+    const sheetName = workbook.SheetNames[0]; // Get first sheet
+    const worksheet = workbook.Sheets[sheetName];
+    const jsonData = XLSX.utils.sheet_to_json(worksheet);
+
+    const data = {};
+
+    jsonData.forEach(row => {
+        const symbol = row['Symbol'] || row['symbol'];
+        data[symbol] = {
+            symbol: symbol,
+            companyName: row['Company Name'] || row['companyName'] || '',
+            industry: row['Industry'] || row['industry'] || '-',
+            marketCap: row['Market Cap'] || row['marketCap'] || '-',
+            stockPrice: parseFloat(row['Stock Price'] || row['stockPrice'] || 0),
+            priceChange: parseFloat(row['Price Change'] || row['priceChange'] || 0),
+            priceChangePercent: parseFloat(row['Price Change %'] || row['priceChangePercent'] || 0),
+            pe: row['PE'] || row['pe'] || '-',
+            dividendYield: parseFloat(row['Div. Yield'] || row['Dividend Yield'] || row['dividendYield'] || 0),
+            annualPayout: parseFloat(row['Annual Payout'] || row['annualPayout'] || 0),
+            payoutRatio: parseFloat(row['Payout Ratio'] || row['payoutRatio'] || 0),
+            payoutRatioStatus: row['Payout Ratio Status'] || row['payoutRatioStatus'] || 'Unknown',
+            growthStreak: parseInt(row['Growth Streak (Years)'] || row['Growth Streak'] || row['growthStreak'] || 0),
+            paymentSchedule: {
+                frequency: row['Payment Frequency'] || row['frequency'] || 'Quarterly',
+                exDividendDate: row['Ex-Dividend Date'] || row['exDividendDate'] || '-',
+                nextPayment: row['Next Payment Date'] || row['nextPayment'] || '-',
+                recordDate: row['Record Date'] || row['recordDate'] || '-',
+                paymentAmount: parseFloat(row['Payment Amount'] || row['paymentAmount'] || 0),
+                annualYield: parseFloat(row['Annual Yield'] || row['annualYield'] || 0),
+                lastIncrease: row['Last Increase Date'] || row['lastIncrease'] || '-',
+                fiveYearGrowth: parseFloat(row['5-Year Growth (%)'] || row['fiveYearGrowth'] || 0),
+                dividendKing: (row['Dividend King Status'] || row['dividendKing'] || '').toLowerCase() === 'yes'
+            },
+            description: row['Company Description'] || row['description'] || ''
+        };
+    });
+
+    return data;
+}
+
+// Function to parse CSV file
+function parseCSV(csvContent) {
+    const lines = csvContent.trim().split('\n');
+    const headers = lines[0].split(',');
+    const data = {};
+
+    for (let i = 1; i < lines.length; i++) {
+        const values = [];
+        let current = '';
+        let inQuotes = false;
+
+        // Handle quoted fields (for descriptions with commas)
+        for (let char of lines[i]) {
+            if (char === '"') {
+                inQuotes = !inQuotes;
+            } else if (char === ',' && !inQuotes) {
+                values.push(current.trim());
+                current = '';
+            } else {
+                current += char;
+            }
+        }
+        values.push(current.trim());
+
+        const symbol = values[0];
+        data[symbol] = {
+            symbol: values[0],
+            companyName: values[1],
+            industry: values[2],
+            marketCap: values[3],
+            stockPrice: parseFloat(values[4]),
+            priceChange: 0, // Not in CSV, can be calculated or set to 0
+            priceChangePercent: 0, // Not in CSV, can be calculated or set to 0
+            dividendYield: parseFloat(values[5]),
+            annualPayout: parseFloat(values[6]),
+            payoutRatio: parseFloat(values[7]),
+            payoutRatioStatus: values[8],
+            growthStreak: parseInt(values[9]),
+            paymentSchedule: {
+                frequency: values[10],
+                exDividendDate: values[11],
+                nextPayment: values[12],
+                recordDate: values[13],
+                paymentAmount: parseFloat(values[14]),
+                annualYield: parseFloat(values[15]),
+                lastIncrease: values[16],
+                fiveYearGrowth: parseFloat(values[17]),
+                dividendKing: values[18].toLowerCase() === 'yes'
+            },
+            description: values[19].replace(/^"|"$/g, ''),
+            dividendHistory: [] // Can be extended to read from separate CSV if needed
+        };
+    }
+
+    return data;
+}
+
+// Load dividend data from CSV or Excel
+let dividendData = {};
+
+function loadDividendData() {
+    try {
+        // Try to load Excel file first
+        if (fs.existsSync(EXCEL_FILE_PATH)) {
+            console.log('Loading data from Excel file...');
+            dividendData = parseExcel(EXCEL_FILE_PATH);
+            console.log(`Loaded ${Object.keys(dividendData).length} stocks from Excel`);
+        }
+        // Fall back to CSV if Excel doesn't exist
+        else if (fs.existsSync(CSV_FILE_PATH)) {
+            console.log('Loading data from CSV file...');
+            const csvContent = fs.readFileSync(CSV_FILE_PATH, 'utf-8');
+            dividendData = parseCSV(csvContent);
+            console.log(`Loaded ${Object.keys(dividendData).length} stocks from CSV`);
+        } else {
+            console.error('No data file found (CSV or Excel)');
+            dividendData = {};
+        }
+    } catch (error) {
+        console.error('Error loading data file:', error);
+        dividendData = {};
+    }
+}
+
+// Load data on startup
+loadDividendData();
+
+// GET endpoint to fetch dividend data by stock symbol
+app.get('/api/dividend/:symbol', (req, res) => {
+    const symbol = req.params.symbol.toUpperCase();
+
+    if (dividendData[symbol]) {
+        res.json({
+            success: true,
+            data: dividendData[symbol]
+        });
+    } else {
+        res.status(404).json({
+            success: false,
+            message: `No dividend data found for symbol: ${symbol}`
+        });
+    }
+});
+
+// GET endpoint to list all available stock symbols
+app.get('/api/stocks', (req, res) => {
+    const stocks = Object.keys(dividendData).map(symbol => ({
+        symbol: symbol,
+        companyName: dividendData[symbol].companyName
+    }));
+
+    res.json({
+        success: true,
+        data: stocks
+    });
+});
+
+// POST endpoint to reload data from CSV/Excel
+app.post('/api/reload', (req, res) => {
+    try {
+        loadDividendData();
+        res.json({
+            success: true,
+            message: 'Dividend data reloaded from Excel/CSV',
+            count: Object.keys(dividendData).length
+        });
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            message: 'Error reloading data',
+            error: error.message
+        });
+    }
+});
+
+// Health check endpoint
+app.get('/health', (req, res) => {
+    res.json({
+        status: 'OK',
+        timestamp: new Date().toISOString()
+    });
+});
+
+app.listen(port, () => {
+    console.log(`Dividend Scout API server running at http://localhost:${port}`);
+    console.log(`Excel file location: ${EXCEL_FILE_PATH}`);
+    console.log(`CSV file location: ${CSV_FILE_PATH}`);
+    console.log(`Available endpoints:`);
+    console.log(`  GET  /api/dividend/:symbol - Get dividend data for a stock`);
+    console.log(`  GET  /api/stocks - List all available stocks`);
+    console.log(`  POST /api/reload - Reload data from Excel/CSV file`);
+    console.log(`  GET  /health - Health check`);
+});
